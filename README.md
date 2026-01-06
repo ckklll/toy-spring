@@ -1,2 +1,3 @@
 # toy-spring
 仿写Spring的玩具项目
+主要分为ApplicationContext和BeanFactory两大模块，Application负责包扫描并识别Bean，然后完成BeanDefination和BeanPostProccessor的注册，内部聚合了BeanFactory，将bean的创建和管理交给BeanFactory。BeanFactory是实现IoC和DI的主要部分，通过设计三级缓存解决了依赖注入时的循环依赖问题，并在创建bean时模拟了bean的生命周期。
